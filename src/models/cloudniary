@@ -1,0 +1,26 @@
+import { v2 as cloudinary } from 'cloudinary';
+
+(async function() {
+
+    // Configuration
+    cloudinary.config({ 
+        cloud_name: process.env.cloudnary_cloud_name,
+        api_key: process.env.api_key, 
+        api_secret: process.env.api_secret,
+    });
+
+    // Your Cloudinary-related code here
+    const uploadResult = await cloudinary.uploader
+    .upload(
+        'https://res.cloudinary.com/demo/image/upload/getting-started/shoes.jpg', {
+            public_id: 'shoes',
+        }
+    )
+    .catch((error) => {
+        console.log(error);
+    });     
+
+})();
+
+
+export {uploadResult};

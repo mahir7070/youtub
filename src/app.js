@@ -14,4 +14,10 @@ app.use(cookieParser())
 
 
 
+import { router } from './routes/user.router';
+import { registerUser } from './controllers/user.controller';
+
+
+app.use('/users',registerUser)
+
 export {app};

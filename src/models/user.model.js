@@ -83,7 +83,7 @@ userSchema.methods.generaterefreshToken = function() {
       },
       process.env.REFRESH_TOKEN_SECRET, // Fixed the environment variable name
       {
-        expiresIn: process.env.REFRESH_TOKEN_SECRET// Fixed the environment variable name and option key
+        expiresIn: process.env.REFRESH_TOKEN_SECRET // Fixed the environment variable name and option key
       }
     );
   };
